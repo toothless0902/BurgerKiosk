@@ -69,7 +69,9 @@ namespace BurgerKiosk
             if (rdoBulgogiBurger.Checked || rdoCheeseBurger.Checked || rdoChickenBurger.Checked)
             {
                 MessageBox.Show(lblTotalCost.Text + " 주문이 완료되었습니다!");
+                rdoBulgogiBurger.Focus();
             }
+            
             else
             {
                 UpdateOrderInfo(); 
