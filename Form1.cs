@@ -14,7 +14,12 @@ namespace BurgerKiosk
         
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            
+            if (!rdoBulgogiBurger.Checked && !rdoCheeseBurger.Checked && !rdoChickenBurger.Checked)
+            {
+                lblTotalCost.Text = "메뉴를 선택하세요."; 
+                lblTotalCost.ForeColor = Color.Red;    
+                return; 
+            }
 
             int totalCost = 0;
             lstOrder.Items.Clear();
